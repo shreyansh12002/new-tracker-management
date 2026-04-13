@@ -6,7 +6,7 @@ import bcrypt from "bcryptjs";
 
 export async function GET(req: NextRequest) {
   try {
-    const user = db
+    const user = await db
       .select()
       .from(employees)
       .where(eq(employees.email, "shreyansh@trulyautomate.com"))
